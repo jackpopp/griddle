@@ -220,7 +220,7 @@ p {
     .hide-for-medium-up {
       display: none !important; } }
 
-@media only screen and (min-width: 421px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .hide-for-medium {
     display: inherit !important; } }
 
