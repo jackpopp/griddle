@@ -44,11 +44,11 @@ a {
   color: #cc9393;
   text-decoration: none;
   transition: color 500ms; }
+  a:visited {
+    color: #cc9393; }
   a:hover {
     color: #a95050;
     transition: color 500ms; }
-  a:visited {
-    color: #cc9393; }
 
 input {
   padding: 5px;
