@@ -6,8 +6,8 @@
 // grid setup
 $columns: 8
 $maxWidth: 1280px
-$columnPad: 20px
-$rowPad: 20px
+$columnPad: 12px
+$rowPad: 12px
 
 // breakpoints variables
 $xsmall: 320px
@@ -82,10 +82,9 @@ a
 
 input
 	padding: 5px
-	margin: 10px
+	margin: 0 0 10px 0
 	border: 1px solid rgb(170, 170, 170)
 	background: white
-	max-width: 120px
 	width: 100%
 
 button
@@ -96,6 +95,7 @@ button
 	background: $mainColour
 	color: white
 	font-size: 13px
+	display: block
 
 // copy
 
@@ -114,7 +114,9 @@ p
 
 .row
 	width: 100%
-	padding: 0 $rowPad
+	> .row
+		margin-left: -$rowPad
+		margin-right: -$rowPad
 	@extend .clearfix
 	&.collapse
 		padding: 0
@@ -123,13 +125,12 @@ p
 			padding: 0
 
 .column
+	padding-left: $columnPad
 	padding-right: $columnPad
 	float: left
 	width: 100%
 	&.collapse
 		padding: 0
-	&:last-child
-		padding-right: 0
 
 // dynamically create our columns
 @mixin createColumns
@@ -146,6 +147,7 @@ p
 			@extend .column
 			@media only screen and (max-width: $medium - 1)
 				width: 100%/ ($columns / $i)
+
 
 @include createColumns
 

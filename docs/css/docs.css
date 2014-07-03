@@ -1,6 +1,7 @@
 .demo div[class^='col-'], .demo div[class*='col-'] {
   background: #c4c4c4;
-  padding: 2px; }
+  padding: 5px inherit 5px inherit;
+  line-height: 1.6; }
   .demo div[class^='col-']:nth-child(odd), .demo div[class*='col-']:nth-child(odd) {
     background: #e2e2e2; }
 .demo .row {

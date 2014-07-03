@@ -52,10 +52,9 @@ a {
 
 input {
   padding: 5px;
-  margin: 10px;
+  margin: 0 0 10px 0;
   border: 1px solid #aaaaaa;
   background: white;
-  max-width: 120px;
   width: 100%; }
 
 button {
@@ -65,7 +64,8 @@ button {
   border: 0;
   background: #cc9393;
   color: white;
-  font-size: 13px; }
+  font-size: 13px;
+  display: block; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px; }
@@ -80,21 +80,22 @@ p {
   margin: 0 auto; }
 
 .row {
-  width: 100%;
-  padding: 0 20px; }
+  width: 100%; }
+  .row > .row {
+    margin-left: -12px;
+    margin-right: -12px; }
   .row.collapse {
     padding: 0; }
   .row.collapse-columns .column, .row.collapse-columns .col-1, .row.collapse-columns .col-1-med, .row.collapse-columns .col-1-small, .row.collapse-columns .col-2, .row.collapse-columns .col-2-med, .row.collapse-columns .col-2-small, .row.collapse-columns .col-3, .row.collapse-columns .col-3-med, .row.collapse-columns .col-3-small, .row.collapse-columns .col-4, .row.collapse-columns .col-4-med, .row.collapse-columns .col-4-small, .row.collapse-columns .col-5, .row.collapse-columns .col-5-med, .row.collapse-columns .col-5-small, .row.collapse-columns .col-6, .row.collapse-columns .col-6-med, .row.collapse-columns .col-6-small, .row.collapse-columns .col-7, .row.collapse-columns .col-7-med, .row.collapse-columns .col-7-small, .row.collapse-columns .col-8, .row.collapse-columns .col-8-med, .row.collapse-columns .col-8-small {
     padding: 0; }
 
 .column, .col-1, .col-1-med, .col-1-small, .col-2, .col-2-med, .col-2-small, .col-3, .col-3-med, .col-3-small, .col-4, .col-4-med, .col-4-small, .col-5, .col-5-med, .col-5-small, .col-6, .col-6-med, .col-6-small, .col-7, .col-7-med, .col-7-small, .col-8, .col-8-med, .col-8-small {
-  padding-right: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
   float: left;
   width: 100%; }
   .column.collapse, .collapse.col-1, .collapse.col-1-med, .collapse.col-1-small, .collapse.col-2, .collapse.col-2-med, .collapse.col-2-small, .collapse.col-3, .collapse.col-3-med, .collapse.col-3-small, .collapse.col-4, .collapse.col-4-med, .collapse.col-4-small, .collapse.col-5, .collapse.col-5-med, .collapse.col-5-small, .collapse.col-6, .collapse.col-6-med, .collapse.col-6-small, .collapse.col-7, .collapse.col-7-med, .collapse.col-7-small, .collapse.col-8, .collapse.col-8-med, .collapse.col-8-small {
     padding: 0; }
-  .column:last-child, .col-1:last-child, .col-1-med:last-child, .col-1-small:last-child, .col-2:last-child, .col-2-med:last-child, .col-2-small:last-child, .col-3:last-child, .col-3-med:last-child, .col-3-small:last-child, .col-4:last-child, .col-4-med:last-child, .col-4-small:last-child, .col-5:last-child, .col-5-med:last-child, .col-5-small:last-child, .col-6:last-child, .col-6-med:last-child, .col-6-small:last-child, .col-7:last-child, .col-7-med:last-child, .col-7-small:last-child, .col-8:last-child, .col-8-med:last-child, .col-8-small:last-child {
-    padding-right: 0; }
 
 @media only screen and (min-width: 1025px) {
   .col-1 {
