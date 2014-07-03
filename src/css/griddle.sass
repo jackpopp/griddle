@@ -53,6 +53,26 @@ ul
 
 // element styling
 
+body
+	//font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
+	font-weight: 300
+	-webkit-font-smoothing: antialiased
+	word-break: break-word
+	margin: 0
+	padding: 0
+	color: $bodyColour
+	transition: color 500ms
+	a
+		color: $mainColour
+		text-decoration: none
+		transition: color 500ms
+		&:hover
+			color: darken($mainColour, 20%)
+			transition: color 500ms
+		&:visited
+			color: $mainColour
+
 input
 	padding: 5px
 	margin: 10px
@@ -69,25 +89,6 @@ button
 	background: $mainColour
 	color: white
 	font-size: 13px
-
-a
-	color: $mainColour
-	text-decoration: none
-	&:hover
-		color: darken($mainColour, 20%)
-		transition: color 500ms
-	&:visited
-		color: $mainColour
-
-body
-	//font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
-	font-weight: 300
-	-webkit-font-smoothing: antialiased
-	word-break: break-all
-	margin: 0
-	padding: 0
-	color: $bodyColour
 
 // GRID
 
@@ -143,4 +144,6 @@ body
 		right: 100%
 	&:after 
 		left: 100%
- 
+
+
+// VISIBILITY

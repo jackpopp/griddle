@@ -5,7 +5,7 @@ Files and destination variables
 **/
 
 var	ASSET_DIR         = './src/', // development source assets
-	DEV_DEST_DIR      = './example/', // development destination assets
+	DEV_DEST_DIR      = './docs/', // development destination assets
 	PROD_DEV_DEST_DIR = './build/', // production assets
 	MAIN_JS           = 'main.js'; // compiled js filename
 
