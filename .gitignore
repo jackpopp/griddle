@@ -2,3 +2,4 @@ src/css/docs.sass
 stage/*
 node_modules/*
 .sass-cache/*
+todo.md

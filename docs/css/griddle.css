@@ -39,15 +39,16 @@ body {
   padding: 0;
   color: #3f3f3f;
   transition: color 500ms; }
-  body a {
-    color: #cc9393;
-    text-decoration: none;
+
+a {
+  color: #cc9393;
+  text-decoration: none;
+  transition: color 500ms; }
+  a:hover {
+    color: #a95050;
     transition: color 500ms; }
-    body a:hover {
-      color: #a95050;
-      transition: color 500ms; }
-    body a:visited {
-      color: #cc9393; }
+  a:visited {
+    color: #cc9393; }
 
 input {
   padding: 5px;
@@ -66,9 +67,10 @@ button {
   color: white;
   font-size: 13px; }
 
-body h1, body h2, body h3, body h4, body h5, body h6, body p {
+h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px; }
-body p {
+
+p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 16px; }
@@ -94,11 +96,11 @@ body p {
   .column:last-child, .col-1:last-child, .col-1-med:last-child, .col-1-small:last-child, .col-2:last-child, .col-2-med:last-child, .col-2-small:last-child, .col-3:last-child, .col-3-med:last-child, .col-3-small:last-child, .col-4:last-child, .col-4-med:last-child, .col-4-small:last-child, .col-5:last-child, .col-5-med:last-child, .col-5-small:last-child, .col-6:last-child, .col-6-med:last-child, .col-6-small:last-child, .col-7:last-child, .col-7-med:last-child, .col-7-small:last-child, .col-8:last-child, .col-8-med:last-child, .col-8-small:last-child {
     padding-right: 0; }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-1 {
     width: 12.5%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-1-med {
     width: 12.5%; } }
 
@@ -106,11 +108,11 @@ body p {
   .col-1-small {
     width: 12.5%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-2 {
     width: 25%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-2-med {
     width: 25%; } }
 
@@ -118,11 +120,11 @@ body p {
   .col-2-small {
     width: 25%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-3 {
     width: 37.5%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-3-med {
     width: 37.5%; } }
 
@@ -130,11 +132,11 @@ body p {
   .col-3-small {
     width: 37.5%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-4 {
     width: 50%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-4-med {
     width: 50%; } }
 
@@ -142,11 +144,11 @@ body p {
   .col-4-small {
     width: 50%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-5 {
     width: 62.5%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-5-med {
     width: 62.5%; } }
 
@@ -154,11 +156,11 @@ body p {
   .col-5-small {
     width: 62.5%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-6 {
     width: 75%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-6-med {
     width: 75%; } }
 
@@ -166,11 +168,11 @@ body p {
   .col-6-small {
     width: 75%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-7 {
     width: 87.5%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-7-med {
     width: 87.5%; } }
 
@@ -178,11 +180,11 @@ body p {
   .col-7-small {
     width: 87.5%; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .col-8 {
     width: 100%; } }
 
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
   .col-8-med {
     width: 100%; } }
 
@@ -200,5 +202,32 @@ body p {
     right: 100%; }
   .pull-out:before:after, .out:after:after {
     left: 100%; }
+
+*[class^="hide-for-"], *[class*=" hide-for-"] {
+  display: none !important; }
+
+@media only screen and (min-width: 421px) {
+  .hide-for-small {
+    display: inherit !important; } }
+
+@media only screen and (min-width: 1025px) {
+  .hide-for-medium-down {
+    display: inherit !important; } }
+
+.hide-for-medium-up {
+  display: inherit !important; }
+  @media only screen and (min-width: 640px) {
+    .hide-for-medium-up {
+      display: none !important; } }
+
+@media only screen and (min-width: 421px) {
+  .hide-for-medium {
+    display: inherit !important; } }
+
+.hide-for-large {
+  display: inherit !important; }
+  @media only screen and (min-width: 1025px) {
+    .hide-for-large {
+      display: inherit !important; } }
 
 /*# sourceMappingURL=griddle.css.map */

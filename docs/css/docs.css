@@ -1,7 +1,7 @@
-.demo div[class^='col-'], .demo div[class*=' col-'] {
+.demo div[class^='col-'], .demo div[class*='col-'] {
   background: #c4c4c4;
   padding: 2px; }
-  .demo div[class^='col-']:nth-child(odd), .demo div[class*=' col-']:nth-child(odd) {
+  .demo div[class^='col-']:nth-child(odd), .demo div[class*='col-']:nth-child(odd) {
     background: #e2e2e2; }
 .demo .row {
   margin-bottom: 10px; }
