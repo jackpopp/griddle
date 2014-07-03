@@ -1,0 +1,146 @@
+// VARS
+
+// grid setup
+$columns: 8
+$maxWidth: 1280px
+$columnPad: 20px
+$rowPad: 20px
+
+// breakpoints variables
+$small: 420px
+$medium: 640px // dont really need this
+$large: 1024px
+
+// default styling
+$mainColour: rgb(204, 147, 147)
+$bodyColour: rgb(63, 63, 63)
+
+// reset and cleafix
+
+*
+	box-sizing: border-box
+
+ul
+	margin: 0
+	padding: 0
+	li
+		padding: 5px 0
+		margin: 0
+		list-style: none
+
+// end reset and clearfix
+
+// utility classes
+
+.clearfix:after 
+	visibility: hidden
+	display: block
+	font-size: 0
+	content: " "
+	clear: both
+	height: 0
+	
+* html .clearfix
+	zoom: 1
+*:first-child+html .clearfix 
+	zoom: 1
+
+.left
+	float: left
+
+.right
+	float: right
+
+// element styling
+
+input
+	padding: 5px
+	margin: 10px
+	border: 1px solid rgb(170, 170, 170)
+	background: white
+	max-width: 120px
+	width: 100%
+
+button
+	padding: 10px
+	margin: 10px 0
+	width: 80px
+	border: 0
+	background: $mainColour
+	color: white
+	font-size: 13px
+
+a
+	color: $mainColour
+	text-decoration: none
+	&:hover
+		color: darken($mainColour, 20%)
+		transition: color 500ms
+	&:visited
+		color: $mainColour
+
+body
+	//font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
+	font-weight: 300
+	-webkit-font-smoothing: antialiased
+	word-break: break-all
+	margin: 0
+	padding: 0
+	color: $bodyColour
+
+// GRID
+
+.container
+	max-width: $maxWidth
+	margin: 0 auto
+
+.row
+	width: 100%
+	padding: 0 $rowPad
+	@extend .clearfix
+	&.collapse
+		padding: 0
+	&.collapse-columns
+		.column
+			padding: 0
+
+.column
+	padding-right: $columnPad
+	float: left
+	width: 100%
+	&.collapse
+		padding: 0
+	&:last-child
+		padding-right: 0
+
+// dynamically create our columns
+@mixin createColumns
+	@for $i from 1 through $columns
+		.col-#{$i}
+			@media only screen and (min-width: $large)
+				width: 100%/ ($columns / $i)
+			@extend .column
+		.col-#{$i}-med
+			@media only screen and (min-width: $medium) and (max-width: $large - 1)
+				width: 100%/ ($columns / $i)
+			@extend .column
+		.col-#{$i}-small
+			@extend .column
+			@media only screen and (max-width: $medium - 1)
+				width: 100%/ ($columns / $i)
+
+@include createColumns
+
+// fullwidth pullout within the main container
+.pull-out:before, .out:after
+	content: ""
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 9999px
+	&:before
+		right: 100%
+	&:after 
+		left: 100%
+ 
