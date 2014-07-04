@@ -79,7 +79,7 @@ gulp.task('js', function(cb){
 		.pipe(coffee({bare: true}))
 		.pipe(gulp.dest(DEV_DEST_DIR+'js'));
 
-	copy = gulp.src(ASSET_DIR+'js/**/*.js')
+	copy = gulp.src([ASSET_DIR+'js/**/*.*', '!'+ASSET_DIR+'js/**/*.coffee'])
 		.pipe(gulp.dest(DEV_DEST_DIR+'js'));
 
 	return merge(compile, copy);
