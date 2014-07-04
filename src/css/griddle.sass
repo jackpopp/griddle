@@ -79,6 +79,14 @@ body
 h1,h2,h3,h4,h5,h6,p,a
 	color: $bodyColor
 
+// copy
+h1,h2,h3,h4,h5,h6,p
+	margin-top: 10px
+p
+	font-size: 16px
+	line-height: 1.6
+	margin-bottom: 16px
+
 a
 	color: $mainColor
 	text-decoration: none
@@ -135,15 +143,6 @@ button
 		&:hover
 			background-color: darken($blandColor, 10%)
 
-// copy
-
-h1,h2,h3,h4,h5,h6,p
-	margin-top: 10px
-p
-	font-size: 16px
-	line-height: 1.6
-	margin-bottom: 16px
-
 // GRID
 
 .container
@@ -177,14 +176,26 @@ p
 			@media only screen and (min-width: $large)
 				width: 100%/ ($columns / $i)
 			@extend .column
+		.push-#{$i}
+			@media only screen and (min-width: $large)
+				margin-left: 100%/ ($columns / $i)
+
 		.col-#{$i}-med
 			@media only screen and (min-width: $medium) and (max-width: $large - 1)
 				width: 100%/ ($columns / $i)
 			@extend .column
+		.push-#{$i}-med
+			@media only screen and (min-width: $medium) and (max-width: $large - 1)
+				margin-left: 100%/ ($columns / $i)
+
 		.col-#{$i}-small
 			@extend .column
 			@media only screen and (max-width: $medium - 1)
 				width: 100%/ ($columns / $i)
+		.push-#{$i}-small
+			@media only screen and (max-width: $medium - 1)
+				margin-left: 100%/ ($columns / $i)
+
 
 
 @include createColumns
