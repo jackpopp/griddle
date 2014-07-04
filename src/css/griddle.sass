@@ -204,3 +204,27 @@ p
 	display: inherit!important
 	@media only screen and (min-width: $large)
 		display: none!important
+
+*[class^="show-for-"], *[class*=" show-for-"]
+	display: none!important
+
+.show-for-small
+	@media only screen and (max-width: $medium - 1)
+		display: inherit!important
+
+.show-for-medium
+	@media only screen and (min-width: $medium) and (max-width: $large - 1)
+		display: inherit!important
+
+.show-for-medium-down
+	display: inherit!important
+	@media only screen and (min-width: $large)
+		display: none!important
+
+.show-for-medium-up
+	@media only screen and (min-width: $medium)
+		display: inherit!important
+
+.show-for-large
+	@media only screen and (min-width: $large)
+		display: inherit!important
