@@ -1,5 +1,7 @@
 @import url(normalize.css);
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 ul {
@@ -38,16 +40,19 @@ body {
   margin: 0;
   padding: 0;
   color: #3f3f3f;
+  -webkit-transition: color 500ms;
   transition: color 500ms; }
 
 a {
   color: #cc9393;
   text-decoration: none;
+  -webkit-transition: color 500ms;
   transition: color 500ms; }
   a:visited {
     color: #cc9393; }
   a:hover {
     color: #a95050;
+    -webkit-transition: color 500ms;
     transition: color 500ms; }
 
 input, textarea {
@@ -246,5 +251,3 @@ p {
   @media only screen and (min-width: 1025px) {
     .hide-for-large {
       display: inherit !important; } }
-
-/*# sourceMappingURL=griddle.css.map */
