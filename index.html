@@ -28,6 +28,9 @@
 						<p>
 							The responsive grid can be set to any number of columns by specifying the <strong>$columns</strong><i>(default 8)</i> variable before building the sass file and has options for different column widths depending on screen size.
 						</p>
+						<p>
+							The grid will also allow us to push columns accross the row by adding the <strong>push-*</strong> to class, this will push the column along by the amount of columns specified.
+						</p>
 					</div>
 				</div>
 				
@@ -61,6 +64,13 @@
 							</div>
 							<div class="row">
 								<div class="col-8">8</div>
+							</div>
+							<div class="row">
+								<div class="col-4 push-2">4 col push 2</div>
+							</div>
+							<div class="row">
+								<div class="col-2">2 col push 0</div>
+								<div class="col-2 push-4">2 col push 4</div>
 							</div>
 						</div>
 					</div>
@@ -98,6 +108,13 @@
 							<div class="row">
 								<div class="col-8 col-8-med">8</div>
 							</div>
+							<div class="row">
+								<div class="col-4 col-4-med push-2 push-2-med">4 col push 2</div>
+							</div>
+							<div class="row">
+								<div class="col-2 col-2-med">2 col push 0</div>
+								<div class="col-2 col-2-med push-4 push-4-med">2 col push 4</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -133,6 +150,13 @@
 							</div>
 							<div class="row">
 								<div class="col-8 col-8-med col-8-small">8</div>
+							</div>
+							<div class="row">
+								<div class="col-4 col-4-med col-4-small push-2 push-2-med push-2-small">4 col push 2</div>
+							</div>
+							<div class="row">
+								<div class="col-2 col-2-med col-2-small">2 col push 0</div>
+								<div class="col-2 col-2-med col-2-small push-4 push-4-med push-4-small">2 col push 4</div>
 							</div>
 						</div>
 					</div>
