@@ -3,6 +3,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background-image: url(../js/boxsizing.htc);
   *behavior: url(../js/boxsizing.htc); }
 
 ul {
