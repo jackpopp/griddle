@@ -74,24 +74,29 @@ label {
 button {
   padding: 10px;
   margin: 10px 0;
-  width: 80px;
+  min-width: 80px;
   border: 0;
   background-color: #cc9393;
+  border: 1px solid #bc7070;
   color: white;
   font-size: 13px;
   display: block; }
   button:hover {
     background-color: #bc7070; }
   button.warn {
-    background-color: #cc5e5e; }
+    background-color: #cc5e5e;
+    border: 1px solid #bc3b3b; }
     button.warn:hover {
       background-color: #bc3b3b; }
   button.success {
-    background-color: #cc5e5e; }
+    background-color: #9fcc8a;
+    border: 1px solid #82bd66; }
     button.success:hover {
-      background-color: #bc3b3b; }
+      background-color: #82bd66; }
   button.bland {
-    background-color: #e2e2e2; }
+    background-color: #e2e2e2;
+    border: 1px solid #c9c9c9;
+    color: #3f3f3f; }
     button.bland:hover {
       background-color: #c9c9c9; }
 
@@ -302,5 +307,5 @@ p {
     background-color: #cc5e5e;
     border: 1px solid #bc3b3b; }
   .panel.success {
-    background-color: #9fd885;
-    border: 1px solid #81cc5e; }
+    background-color: #9fcc8a;
+    border: 1px solid #82bd66; }
