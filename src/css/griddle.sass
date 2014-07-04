@@ -6,6 +6,7 @@
 // grid setup
 $columns: 8
 $maxWidth: 1280px
+$defaultPad: 12px
 $columnPad: 12px
 $rowPad: 12px
 
@@ -19,11 +20,13 @@ $xlarge: 1280px
 // default styling
 $mainColor: #CC9393
 $bodyColor: rgb(63, 63, 63)
+$altBodyColor: #FFF
 
-$nuteralColor: #E2E2E2
+$blandColor: #E2E2E2
 //$errorColor: #CE5F5F
-$errorColor: #D88585
+$warnColor: #CC5E5E
 $successColor: #9FD885
+$buttonCopy: #FFF
 
 // reset and cleafix
 
@@ -72,14 +75,13 @@ body
 	padding: 0
 	color: $bodyColor
 
-// element styling
+// ELEMENTS
 h1,h2,h3,h4,h5,h6,p,a
 	color: $bodyColor
 
 a
 	color: $mainColor
 	text-decoration: none
-	transition: all 0.5s
 	&:hover
 		color: darken($mainColor, 20%)
 
@@ -109,12 +111,24 @@ button
 	margin: 10px 0
 	width: 80px
 	border: 0
-	background: $mainColor
-	color: white
+	background-color: $mainColor
+	color: $buttonCopy
 	font-size: 13px
 	display: block
 	&:hover
-		background: darken($mainColor, 10%)
+		background-color: darken($mainColor, 10%)
+	&.warn
+		background-color: $warnColor
+		&:hover
+			background-color: darken($warnColor, 10%)
+	&.success
+		background-color: $warnColor
+		&:hover
+			background-color: darken($warnColor, 10%)
+	&.bland
+		background-color: $blandColor
+		&:hover
+			background-color: darken($blandColor, 10%)
 
 // copy
 
@@ -233,3 +247,24 @@ p
 .show-for-large
 	@media only screen and (min-width: $large)
 		display: inherit!important
+
+// PROMPTS
+.panel
+	background-color: $mainColor
+	border: 1px solid darken($mainColor, 10%)
+	padding: $defaultPad
+	margin-bottom: $defaultPad*2
+	*
+		color: $altBodyColor
+	&.bland
+		background-color: $blandColor
+		border: 1px solid darken($blandColor, 10%)
+		*
+			color: $bodyColor
+	&.warn
+		background-color: $warnColor
+		border: 1px solid darken($warnColor, 10%)
+	&.success
+		background-color: $successColor
+		border: 1px solid darken($successColor, 10%)
+
