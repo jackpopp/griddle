@@ -39,21 +39,18 @@ body {
   word-break: break-word;
   margin: 0;
   padding: 0;
-  color: #3f3f3f;
-  -webkit-transition: color 500ms;
-  transition: color 500ms; }
+  color: #3f3f3f; }
+
+h1, h2, h3, h4, h5, h6, p, a {
+  color: #3f3f3f; }
 
 a {
   color: #cc9393;
   text-decoration: none;
-  -webkit-transition: color 500ms;
-  transition: color 500ms; }
-  a:visited {
-    color: #cc9393; }
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
   a:hover {
-    color: #a95050;
-    -webkit-transition: color 500ms;
-    transition: color 500ms; }
+    color: #a95050; }
 
 input, textarea {
   font-size: 14px;
@@ -85,6 +82,8 @@ button {
   color: white;
   font-size: 13px;
   display: block; }
+  button:hover {
+    background: #bc7070; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px; }
