@@ -38,6 +38,7 @@ gulp.task('css', function(cb){
 		.pipe(gulp.dest(DEV_DEST_DIR+'css'));
 
 	copy = gulp.src(ASSET_DIR+'css/**/*.css')
+		.pipe(autoprefixer("last 7 version", "ie 8"))
 		.pipe(gulp.dest(DEV_DEST_DIR+'css'));
 
 	return merge(compile, copy);

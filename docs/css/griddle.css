@@ -50,13 +50,20 @@ a {
     color: #a95050;
     transition: color 500ms; }
 
-input {
+input, textarea {
   font-size: 14px;
   padding: 8px;
   margin: 0 0 10px 0;
   border: 1px solid #aaaaaa;
   background: white;
   width: 100%; }
+  input:focus, textarea:focus {
+    background: whitesmoke;
+    outline: none;
+    border-color: gray; }
+
+textarea {
+  height: 100px; }
 
 label {
   font-size: 14px;
@@ -200,15 +207,15 @@ p {
   .col-8-small {
     width: 100%; } }
 
-.pull-out:before, .out:after {
+.pull-out:before, .pull-out:after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   width: 9999px; }
-  .pull-out:before:before, .out:after:before {
+  .pull-out:before:before, .pull-out:after:before {
     right: 100%; }
-  .pull-out:before:after, .out:after:after {
+  .pull-out:before:after, .pull-out:after:after {
     left: 100%; }
 
 *[class^="hide-for-"], *[class*=" hide-for-"] {

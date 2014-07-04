@@ -80,13 +80,20 @@ a
 		color: darken($mainColour, 20%)
 		transition: color 500ms
 
-input
+input, textarea
 	font-size: 14px
 	padding: 8px
 	margin: 0 0 10px 0
 	border: 1px solid rgb(170, 170, 170)
 	background: white
 	width: 100%
+	&:focus
+		background: whitesmoke
+		outline: none
+		border-color: gray
+
+textarea
+	height: 100px
 
 label
 	font-size: 14px
@@ -159,7 +166,7 @@ p
 @include createColumns
 
 // fullwidth pullout within the main container
-.pull-out:before, .out:after
+.pull-out:before, .pull-out:after
 	content: ""
 	position: absolute
 	top: 0
