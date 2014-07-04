@@ -17,8 +17,13 @@ $large: 1025px
 $xlarge: 1280px
 
 // default styling
-$mainColour: rgb(204, 147, 147)
-$bodyColour: rgb(63, 63, 63)
+$mainColor: #CC9393
+$bodyColor: rgb(63, 63, 63)
+
+$nuteralColor: #E2E2E2
+//$errorColor: #CE5F5F
+$errorColor: #D88585
+$successColor: #9FD885
 
 // reset and cleafix
 
@@ -65,20 +70,18 @@ body
 	word-break: break-word
 	margin: 0
 	padding: 0
-	color: $bodyColour
-	transition: color 500ms
+	color: $bodyColor
 
 // element styling
+h1,h2,h3,h4,h5,h6,p,a
+	color: $bodyColor
 
 a
-	color: $mainColour
+	color: $mainColor
 	text-decoration: none
-	transition: color 500ms
-	&:visited
-		color: $mainColour
+	transition: all 0.5s
 	&:hover
-		color: darken($mainColour, 20%)
-		transition: color 500ms
+		color: darken($mainColor, 20%)
 
 input, textarea
 	font-size: 14px
@@ -106,10 +109,12 @@ button
 	margin: 10px 0
 	width: 80px
 	border: 0
-	background: $mainColour
+	background: $mainColor
 	color: white
 	font-size: 13px
 	display: block
+	&:hover
+		background: darken($mainColor, 10%)
 
 // copy
 

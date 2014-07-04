@@ -34,7 +34,7 @@ var gulp         = require('gulp'),
 gulp.task('css', function(cb){
 	// compile sass
 	compile = gulp.src(ASSET_DIR+'css/**/*.sass')
-		.pipe(sass({sourcemap: true}))
+		.pipe(sass())
 		.pipe(autoprefixer("last 7 version", "ie 5"))
 		.pipe(gulp.dest(DEV_DEST_DIR+'css'));
 
