@@ -25,7 +25,7 @@ $altBodyColor: #FFF
 $blandColor: #E2E2E2
 //$errorColor: #CE5F5F
 $warnColor: #CC5E5E
-$successColor: #9FD885
+$successColor: #9FCC8A
 $buttonCopy: #FFF
 
 // reset and cleafix
@@ -109,9 +109,10 @@ label
 button
 	padding: 10px
 	margin: 10px 0
-	width: 80px
+	min-width: 80px
 	border: 0
 	background-color: $mainColor
+	border: 1px solid darken($mainColor, 10%)
 	color: $buttonCopy
 	font-size: 13px
 	display: block
@@ -119,14 +120,18 @@ button
 		background-color: darken($mainColor, 10%)
 	&.warn
 		background-color: $warnColor
+		border: 1px solid darken($warnColor, 10%)
 		&:hover
 			background-color: darken($warnColor, 10%)
 	&.success
-		background-color: $warnColor
+		background-color: $successColor
+		border: 1px solid darken($successColor, 10%)
 		&:hover
-			background-color: darken($warnColor, 10%)
+			background-color: darken($successColor, 10%)
 	&.bland
 		background-color: $blandColor
+		border: 1px solid darken($blandColor, 10%)
+		color: $bodyColor
 		&:hover
 			background-color: darken($blandColor, 10%)
 
