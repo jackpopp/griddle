@@ -4,9 +4,14 @@
 		<meta charset="utf-8">
 		<link href="docs/css/griddle.css" rel="stylesheet" type="text/css">
 		<link href="docs/css/docs.css" rel="stylesheet" type="text/css">
+		<link href="docs/css/prism.css" rel="stylesheet" type="text/css">
 		<title>Griddle - CSS framework.</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="docs/js/prism.js"></script>
+		<script>
+			Prism.highlightAll()
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -53,7 +58,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-8">
+					<div class="col-5">
 						<div class="demo">
 							<div class="row">
 								<div class="col-4">4</div>
@@ -83,6 +88,38 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-3">
+						<pre>
+							<code class="language-markup code">
+<div class="row">
+	<div class="col-4">4</div>
+	<div class="col-4">4</div>
+</div>
+<div class="row">
+	<div class="col-5">5</div>
+	<div class="col-3">3</div>
+</div>
+<div class="row">
+	<div class="col-6">6</div>
+	<div class="col-2">2</div>
+</div>
+<div class="row">
+	<div class="col-7">7</div>
+	<div class="col-1">1</div>
+</div>
+<div class="row">
+	<div class="col-8">8</div>
+</div>
+<div class="row">
+	<div class="col-4 push-2">4 col push 2</div>
+</div>
+<div class="row">
+	<div class="col-2">2 col push 0</div>
+	<div class="col-2 push-4">2 col push 4</div>
+</div>
+							</code>
+						</pre>
+					</div>
 				</div>
 				<!-- End Large Grid -->
 
@@ -96,7 +133,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-8 col-8-med">
+					<div class="col-5 col-5-med">
 						<div class="demo">
 							<div class="row">
 								<div class="col-4 col-4-med">4</div>
@@ -126,6 +163,38 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-3 col-3-med col-8-small">
+						<pre>
+							<code class="language-markup code">
+<div class="row">
+	<div class="col-4 col-4-med">4</div>
+	<div class="col-4 col-4-med">4</div>
+</div>
+<div class="row">
+	<div class="col-5 col-5-med">5</div>
+	<div class="col-3 col-3-med">3</div>
+</div>
+<div class="row">
+	<div class="col-6 col-6-med">6</div>
+	<div class="col-2 col-2-med">2</div>
+</div>
+<div class="row">
+	<div class="col-7 col-7-med">7</div>
+	<div class="col-1 col-1-med">1</div>
+</div>
+<div class="row">
+	<div class="col-8 col-8-med">8</div>
+</div>
+<div class="row">
+	<div class="col-4 col-4-med push-2 push-2-med">4 col push 2</div>
+</div>
+<div class="row">
+	<div class="col-2 col-2-med">2 col push 0</div>
+	<div class="col-2 col-2-med push-4 push-4-med">2 col push 4</div>
+</div>
+							</code>
+						</pre>
+					</div>
 				</div>
 				<!-- End Medium Grid -->
 
@@ -139,7 +208,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-8 col-8-med col-8-small">
+					<div class="col-5 col-5-med col-8-small">
 						<div class="demo">
 							<div class="row">
 								<div class="col-4 col-4-med col-4-small">4</div>
@@ -168,6 +237,38 @@
 								<div class="col-2 col-2-med col-2-small push-4 push-4-med push-4-small">2 col push 4</div>
 							</div>
 						</div>
+					</div>
+<div class="col-3 col-3-med">
+						<pre>
+							<code class="language-markup code">
+<div class="row">
+	<div class="col-4 col-4-med col-4-small">4</div>
+	<div class="col-4 col-4-med col-4-small">4</div>
+</div>
+<div class="row">
+	<div class="col-5 col-5-med col-5-small">5</div>
+	<div class="col-3 col-3-med col-3-small">3</div>
+</div>
+<div class="row">
+	<div class="col-6 col-6-med col-6-small">6</div>
+	<div class="col-2 col-2-med col-2-small">2</div>
+</div>
+<div class="row">
+	<div class="col-7 col-7-med col-7-small">7</div>
+	<div class="col-1 col-1-med col-1-small">1</div>
+</div>
+<div class="row">
+	<div class="col-8 col-8-med col-8-small">8</div>
+</div>
+<div class="row">
+	<div class="col-4 col-4-med col-4-small push-2 push-2-med push-2-small">4 col push 2</div>
+</div>
+<div class="row">
+	<div class="col-2 col-2-med col-2-small">2 col push 0</div>
+	<div class="col-2 col-2-med col-2-small push-4 push-4-med push-4-small">2 col push 4</div>
+</div>
+							</code>
+						</pre>
 					</div>
 				</div>
 				<!-- End Small Grid -->
@@ -293,5 +394,12 @@
 			</div>
 
 		</div>
+
+		<script>
+			codes = document.querySelectorAll('.code')
+			for (var i = codes.length - 1; i >= 0; i--) {
+				codes[i].innerHTML = codes[i].innerHTML.replace(/</g, '&lt;')
+			};
+		</script>
 	</body>
 </html>

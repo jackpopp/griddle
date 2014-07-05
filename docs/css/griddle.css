@@ -54,10 +54,10 @@ p {
   margin-bottom: 16px; }
 
 a {
-  color: #cc9393;
+  color: #93bacc;
   text-decoration: none; }
   a:hover {
-    color: #a95050; }
+    color: #508da9; }
 
 input, textarea {
   font-size: 14px;
@@ -87,13 +87,13 @@ button {
   margin: 10px 0;
   min-width: 80px;
   border: 0;
-  background-color: #cc9393;
-  border: 1px solid #bc7070;
+  background-color: #93bacc;
+  border: 1px solid #70a4bc;
   color: white;
   font-size: 13px;
   display: block; }
   button:hover {
-    background-color: #bc7070; }
+    background-color: #70a4bc; }
   button.warn {
     background-color: #cc5e5e;
     border: 1px solid #bc3b3b; }
@@ -391,10 +391,10 @@ button {
     display: inherit !important; } }
 
 .panel {
-  background-color: #cc9393;
-  border: 1px solid #bc7070;
+  background-color: #93bacc;
+  border: 1px solid #70a4bc;
   padding: 12px;
-  margin-bottom: 24px; }
+  margin: 24px 0; }
   .panel * {
     color: white; }
   .panel.bland {
