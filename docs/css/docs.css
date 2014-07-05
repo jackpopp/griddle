@@ -7,3 +7,9 @@
     background: #e2e2e2; }
 .demo .row {
   margin-bottom: 10px; }
+
+.language-markup {
+  font-size: 14px; }
+
+pre[class*="language-"] {
+  margin-top: 0 !important; }
