@@ -17,22 +17,42 @@
 		<div class="container">
 
 			<div class="row">
-					<div class="col-8">
-						<h1>Griddle</h1>
-						<p>
-							Quickly cook up a new website with griddle, a small responsive css framework. <a href="#">Check out the repository on github</a>
-						</p>
-						<h2>Browser Support</h2>
-						<p>Current list of tested and supported browsers</p>
+				<div class="col-8">
+					<h1>Griddle</h1>
+					<p>
+						Quickly cook up a new website with griddle, a small responsive css framework. <a href="https://github.com/jackpopp/griddle">Check out the repository on github</a>
+					</p>
+					<h2>Browser Support</h2>
+					<p>Current list of tested and supported browsers</p>
+					<ul>
+						<li>Chrome 14+</li>
+						<li>Firefox 3.6+</li>
+						<li>Safari 4+</li>
+						<li>Opera 10.6+</li>
+						<li>IE 9+</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h2>Installation</h2>
+				</div>
+				<div class="col-4 col-4-med">
+					<p>A prebuilt version of Griddle with default settings can be found in the <strong>build</strong> folder, you can create a custom build from the supplied SASS file.</p>
+					<p>To build a custom version of Griddle you can use the original SASS file along with the provided gulpfile to build the css file. You can adjust the amount of columns, breakpoints, gutters and more.</p>
+				</div>
+				<div class="col-4 col-4-med">
+					<div class="panel">
+						<h4>Custom Build</h4>
 						<ul>
-							<li>Chrome 14+</li>
-							<li>Firefox 3.6+</li>
-							<li>Safari 4+</li>
-							<li>Opera 10.6+</li>
-							<li>IE 9+</li>
+							<li>Install node and npm</li>
+							<li>Install gulp (globally) <strong>npm install -g gulp</strong></li>
+							<li>Install dependancies <strong>npm install</strong></li>
+							<li>Build file <strong>gulp build</strong></li>
 						</ul>
 					</div>
 				</div>
+			</div>
 
 			<div id="grid-doc">
 
@@ -420,43 +440,36 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-4 col-4-med">
+					<div class="col-4 col-4-med push-2-med">
 						<div class="panel">
 							<p>This is the default style panel</p>
 							<p>It's designed to draw a users attention</p>
 						</div>
 						<div class="panel bland">
-							<p>This is the default style panel</p>
-							<p>It's designed to draw a users attention</p>
+							<p>This is the bland style panel</p>
 						</div>
 						<div class="panel success">
-							<p>This is the default style panel</p>
-							<p>It's designed to draw a users attention</p>
+							<p>This is the success style panel</p>
 						</div>
 						<div class="panel warn">
-							<p>This is the default style panel</p>
-							<p>It's designed to draw a users attention</p>
+							<p>This is the warn style panel</p>
 						</div>
 					</div>
 <div class="col-4">
 						<pre>
 							<code class="language-markup code">
-<button>Default</button>
 <div class="panel">
 	<p>This is the default style panel</p>
 	<p>It's designed to draw a users attention</p>
 </div>
 <div class="panel bland">
-	<p>This is the default style panel</p>
-	<p>It's designed to draw a users attention</p>
+	<p>This is the bland style panel</p>
 </div>
 <div class="panel success">
-	<p>This is the default style panel</p>
-	<p>It's designed to draw a users attention</p>
+	<p>This is the success style panel</p>
 </div>
 <div class="panel warn">
-	<p>This is the default style panel</p>
-	<p>It's designed to draw a users attention</p>
+	<p>This is the warn style panel</p>
 </div>
 							</code>
 						</pre>
@@ -466,6 +479,7 @@
 
 
 		<script>
+			// stop code samples from rendering as html
 			codes = document.querySelectorAll('.code')
 			for (var i = codes.length - 1; i >= 0; i--) {
 				codes[i].innerHTML = codes[i].innerHTML.replace(/</g, '&lt;')
