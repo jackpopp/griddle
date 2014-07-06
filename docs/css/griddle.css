@@ -82,33 +82,36 @@ label {
   margin-left: -2px;
   display: block; }
 
-button {
+button, .button {
   padding: 10px;
-  margin: 10px 0;
+  margin: 0 0 12px 0;
   min-width: 80px;
   border: 0;
   background-color: #93bacc;
   border: 1px solid #70a4bc;
   color: white;
   font-size: 13px;
-  display: block; }
-  button:hover {
-    background-color: #70a4bc; }
-  button.warn {
+  font-weight: 400;
+  text-align: center;
+  display: inline-block; }
+  button:hover, .button:hover {
+    background-color: #70a4bc;
+    color: white; }
+  button.warn, .button.warn {
     background-color: #cc5e5e;
     border: 1px solid #bc3b3b; }
-    button.warn:hover {
+    button.warn:hover, .button.warn:hover {
       background-color: #bc3b3b; }
-  button.success {
+  button.success, .button.success {
     background-color: #9fcc8a;
     border: 1px solid #82bd66; }
-    button.success:hover {
+    button.success:hover, .button.success:hover {
       background-color: #82bd66; }
-  button.bland {
+  button.bland, .button.bland {
     background-color: #e2e2e2;
     border: 1px solid #c9c9c9;
     color: #3f3f3f; }
-    button.bland:hover {
+    button.bland:hover, .button.bland:hover {
       background-color: #c9c9c9; }
 
 .container {
@@ -394,7 +397,7 @@ button {
   background-color: #93bacc;
   border: 1px solid #70a4bc;
   padding: 12px;
-  margin: 24px 0; }
+  margin: 0 0 24px 0; }
   .panel * {
     color: white; }
   .panel.bland {
