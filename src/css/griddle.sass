@@ -116,18 +116,21 @@ label
 	margin-left: -2px
 	display: block
 
-button
+button, .button
 	padding: 10px
-	margin: 10px 0
+	margin: 0 0 $defaultPad 0
 	min-width: 80px
 	border: 0
 	background-color: $mainColor
 	border: 1px solid darken($mainColor, 10%)
 	color: $buttonCopy
 	font-size: 13px
-	display: block
+	font-weight: 400
+	text-align: center
+	display: inline-block
 	&:hover
 		background-color: darken($mainColor, 10%)
+		color: $altBodyColor
 	&.warn
 		background-color: $warnColor
 		border: 1px solid darken($warnColor, 10%)
@@ -144,6 +147,7 @@ button
 		color: $bodyColor
 		&:hover
 			background-color: darken($blandColor, 10%)
+
 
 // GRID
 
@@ -271,7 +275,7 @@ button
 	background-color: $mainColor
 	border: 1px solid darken($mainColor, 10%)
 	padding: $defaultPad
-	margin: $defaultPad*2 0
+	margin: 0 0 $defaultPad*2 0
 	*
 		color: $altBodyColor
 	&.bland
