@@ -28,6 +28,8 @@ $warnColor: #CC5E5E
 $successColor: #9FCC8A
 $buttonCopy: #FFF
 
+$topNavBackground: #252525
+
 // reset and cleafix
 
 *
@@ -287,13 +289,45 @@ button, .button
 
 // NAV
 .top-nav
-	padding: 10px 0
-	background: #252525
+	background: $topNavBackground
 	color: white
 	margin-bottom: 20px
 	width: 100%
+	@extend .clearfix
 	&:fixed
 		position: fixed
 	h1,h2,h3,h4,h5,h6,p,a
 		color: $altBodyColor
 		margin: 10px 0
+	ul
+		margin: 0
+		li
+			float: left
+			padding: 0 0 0 $defaultPad
+			a
+				color: $altBodyColor
+				margin: 0
+				padding: $defaultPad
+				display: block
+				&:hover
+					background: lighten($topNavBackground, 10%)
+
+	&.padded
+		padding: 0 10px
+	&.fixed
+		position: fixed
+	.brand
+		float: left
+.side-nav
+	margin-bottom: 0 $defaultPad*2
+	ul
+		li
+			padding: 0
+			a
+				display: block
+				padding: 10px
+				margin: 0
+				&:hover
+					background: #ccc
+					background: #E6E6E6
+					color: #5F5F5F
