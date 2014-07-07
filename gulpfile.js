@@ -36,6 +36,7 @@ gulp.task('css', function(cb){
 	compile = gulp.src(ASSET_DIR+'css/**/*.sass')
 		.pipe(sass())
 		.pipe(autoprefixer("last 7 version", "ie 5"))
+		.pipe(minifycss())
 		.pipe(gulp.dest(DEV_DEST_DIR+'css'));
 
 	copy = gulp.src(ASSET_DIR+'css/**/*.css')
@@ -107,6 +108,15 @@ gulp.task('clean', function(cb) {
 gulp.task('watch', ['clean'], function() {
   // place code for your default task here
   watch({ glob: ASSET_DIR+'**/*/*.*'}, ['js', 'css', 'img']).pipe(notify({message: 'File changes compiled'}));
+});
+
+
+gulp.task('docs', function(){
+
+});
+
+gulp.task('build', function(){
+
 });
 
 // production
