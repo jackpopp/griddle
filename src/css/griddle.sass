@@ -79,9 +79,6 @@ body
 // ELEMENTS
 h1,h2,h3,h4,h5,h6,p,a
 	color: $bodyColor
-
-// copy
-h1,h2,h3,h4,h5,h6,p
 	margin-top: 10px
 p
 	font-size: 16px
@@ -151,12 +148,10 @@ button, .button
 
 // GRID
 
-.container
-	max-width: $maxWidth
-	margin: 0 auto
-
 .row
 	width: 100%
+	max-width: $maxWidth
+	margin: 0 auto
 	> .row
 		margin-left: -$rowPad
 		margin-right: -$rowPad
@@ -276,12 +271,12 @@ button, .button
 	border: 1px solid darken($mainColor, 10%)
 	padding: $defaultPad
 	margin: 0 0 $defaultPad*2 0
-	*
+	*:not(a)
 		color: $altBodyColor
 	&.bland
 		background-color: $blandColor
 		border: 1px solid darken($blandColor, 10%)
-		*
+		*:not(a)
 			color: $bodyColor
 	&.warn
 		background-color: $warnColor
@@ -290,3 +285,15 @@ button, .button
 		background-color: $successColor
 		border: 1px solid darken($successColor, 10%)
 
+// NAV
+.top-nav
+	padding: 10px 0
+	background: #252525
+	color: white
+	margin-bottom: 20px
+	width: 100%
+	&:fixed
+		position: fixed
+	h1,h2,h3,h4,h5,h6,p,a
+		color: $altBodyColor
+		margin: 10px 0
