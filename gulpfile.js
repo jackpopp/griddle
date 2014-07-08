@@ -35,7 +35,7 @@ gulp.task('css', function(cb){
 	// compile sass
 	compile = gulp.src(ASSET_DIR+'css/**/*.sass')
 		.pipe(sass())
-		.pipe(autoprefixer("last 7 version", "ie 5"))
+		.pipe(autoprefixer("last 10 version", "ie 7"))
 		.pipe(minifycss())
 		.pipe(gulp.dest(DEV_DEST_DIR+'css'));
 
@@ -47,13 +47,14 @@ gulp.task('css', function(cb){
 });
 
 // CSS Optimisation
-gulp.task('cssProd', ['css'], function(cb){
+gulp.task('cssProd', function(cb){
 	// autoprefix, minify, concat
-	return gulp.src(DEV_DEST_DIR+'/css/**/*.*')
-		.pipe(autoprefixer("last 7 version", "ie 5"))
+	return gulp.src(ASSET_DIR+'/css/griddle.sass')
+		.pipe(sass())
+		.pipe(autoprefixer("last 10 version", "ie 7"))
 		.pipe(minifycss())
-		.pipe(concat('core.min.css'))
-		.pipe(gulp.dest(PROD_DEV_DEST_DIR+'/css'))
+		.pipe(concat('griddle.min.css'))
+		.pipe(gulp.dest(PROD_DEV_DEST_DIR))
 });
 
 // Images
@@ -115,15 +116,11 @@ gulp.task('docs', function(){
 
 });
 
-gulp.task('build', function(){
-
-});
-
 // production
 // compile, minify, optimize
 
-gulp.task('production', ['cssProd', 'jsProd', 'imgProd'], function(){
+gulp.task('build', ['cssProd'], function(){
 	// clean up here
 	return gulp.src([DEV_DEST_DIR], {read: false})
-    	.pipe(clean());
+    	//.pipe(clean());
 });
