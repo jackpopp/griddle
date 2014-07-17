@@ -9,6 +9,7 @@ $maxWidth: 1280px
 $defaultPad: 12px
 $columnPad: 12px
 $rowPad: 12px
+$isResponsive: false
 
 // breakpoints variables
 $xsmall: 320px // not currently in use
@@ -151,12 +152,17 @@ button, .button
 // GRID
 
 .row
-	width: 100%
+	@if $isResponsive
+		width: 100%
+	@else
+		width: $maxWidth
+
 	max-width: $maxWidth
 	margin: 0 auto
-	> .row
+	.row
 		margin-left: -$rowPad
 		margin-right: -$rowPad
+		width: 100%
 	@extend .clearfix
 	&.collapse
 		padding: 0
@@ -176,28 +182,34 @@ button, .button
 @mixin createColumns
 	@for $i from 1 through $columns
 		.col-#{$i}
-			@media only screen and (min-width: $large)
+			@if $isResponsive
+				@media only screen and (min-width: $large)
+					width: 100%/ ($columns / $i)
+			@else
 				width: 100%/ ($columns / $i)
 			@extend .column
 		.push-#{$i}
-			@media only screen and (min-width: $large)
+			@if $isResponsive
+				@media only screen and (min-width: $large)
+					margin-left: 100%/ ($columns / $i)
+			@else 
 				margin-left: 100%/ ($columns / $i)
+		@if $isResponsive
+			.col-#{$i}-med
+				@media only screen and (min-width: $medium) and (max-width: $large - 1)
+					width: 100%/ ($columns / $i)
+				@extend .column
+			.push-#{$i}-med
+				@media only screen and (min-width: $medium) and (max-width: $large - 1)
+					margin-left: 100%/ ($columns / $i)
 
-		.col-#{$i}-med
-			@media only screen and (min-width: $medium) and (max-width: $large - 1)
-				width: 100%/ ($columns / $i)
-			@extend .column
-		.push-#{$i}-med
-			@media only screen and (min-width: $medium) and (max-width: $large - 1)
-				margin-left: 100%/ ($columns / $i)
-
-		.col-#{$i}-small
-			@extend .column
-			@media only screen and (max-width: $medium - 1)
-				width: 100%/ ($columns / $i)
-		.push-#{$i}-small
-			@media only screen and (max-width: $medium - 1)
-				margin-left: 100%/ ($columns / $i)
+			.col-#{$i}-small
+				@extend .column
+				@media only screen and (max-width: $medium - 1)
+					width: 100%/ ($columns / $i)
+			.push-#{$i}-small
+				@media only screen and (max-width: $medium - 1)
+					margin-left: 100%/ ($columns / $i)
 
 
 
@@ -217,55 +229,56 @@ button, .button
 
 
 // VISIBILITY
-*[class^="hide-for-"], *[class*=" hide-for-"]
-	display: none!important
-
-.hide-for-small
-	@media only screen and (min-width: $medium)
-		display: inherit!important
-
-.hide-for-medium-down
-	@media only screen and (min-width: $large)
-		display: inherit!important
-
-.hide-for-medium-up
-	display: inherit!important
-	@media only screen and (min-width: $medium)
+@if $isResponsive
+	*[class^="hide-for-"], *[class*=" hide-for-"]
 		display: none!important
 
-.hide-for-medium
-	display: inherit!important
-	@media only screen and (min-width: $medium) and (max-width: $large - 1)
+	.hide-for-small
+		@media only screen and (min-width: $medium)
+			display: inherit!important
+
+	.hide-for-medium-down
+		@media only screen and (min-width: $large)
+			display: inherit!important
+
+	.hide-for-medium-up
+		display: inherit!important
+		@media only screen and (min-width: $medium)
+			display: none!important
+
+	.hide-for-medium
+		display: inherit!important
+		@media only screen and (min-width: $medium) and (max-width: $large - 1)
+			display: none!important
+
+	.hide-for-large
+		display: inherit!important
+		@media only screen and (min-width: $large)
+			display: none!important
+
+	*[class^="show-for-"], *[class*=" show-for-"]
 		display: none!important
 
-.hide-for-large
-	display: inherit!important
-	@media only screen and (min-width: $large)
-		display: none!important
+	.show-for-small
+		@media only screen and (max-width: $medium - 1)
+			display: inherit!important
 
-*[class^="show-for-"], *[class*=" show-for-"]
-	display: none!important
+	.show-for-medium
+		@media only screen and (min-width: $medium) and (max-width: $large - 1)
+			display: inherit!important
 
-.show-for-small
-	@media only screen and (max-width: $medium - 1)
+	.show-for-medium-down
 		display: inherit!important
+		@media only screen and (min-width: $large)
+			display: none!important
 
-.show-for-medium
-	@media only screen and (min-width: $medium) and (max-width: $large - 1)
-		display: inherit!important
+	.show-for-medium-up
+		@media only screen and (min-width: $medium)
+			display: inherit!important
 
-.show-for-medium-down
-	display: inherit!important
-	@media only screen and (min-width: $large)
-		display: none!important
-
-.show-for-medium-up
-	@media only screen and (min-width: $medium)
-		display: inherit!important
-
-.show-for-large
-	@media only screen and (min-width: $large)
-		display: inherit!important
+	.show-for-large
+		@media only screen and (min-width: $large)
+			display: inherit!important
 
 // PROMPTS
 .panel
@@ -292,7 +305,11 @@ button, .button
 	background: $topNavBackground
 	color: white
 	margin-bottom: 20px
-	width: 100%
+	@if $isResponsive
+		width: 100%
+	@else 
+		min-width: $maxWidth
+		width: 100%
 	@extend .clearfix
 	&:fixed
 		position: fixed
@@ -319,6 +336,12 @@ button, .button
 		position: fixed
 	.brand
 		float: left
+
+.row .top-nav
+	width: 100%
+	max-width: 100%
+	min-width: 100%
+
 		
 .side-nav
 	margin-bottom: 0 $defaultPad*2
