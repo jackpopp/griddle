@@ -4,11 +4,11 @@
 // VARS
 
 // grid setup
-$columns: 8
+$columns: 12
 $maxWidth: 1280px
 $defaultPad: 12px
-$columnPad: 12px
-$rowPad: 12px
+$columnPad: 20px
+$rowPad: 20px
 $isResponsive: true
 
 // breakpoints variables
@@ -94,7 +94,7 @@ ul
 		margin: 0
 		list-style: none
 
-input, textarea
+input, textarea, select
 	font-size: 14px
 	padding: 8px
 	margin: 0 0 10px 0
@@ -106,6 +106,20 @@ input, textarea
 		background: whitesmoke
 		outline: none
 		border-color: gray
+
+select
+	height: 35px
+
+input[type="checkbox"], input[type="radio"]
+	float: left
+	display: inline
+	width: auto
+	margin-right: 10px
+	margin-top: 2px
+
+input[type="checkbox"] + label, input[type="radio"] + label
+	float: left
+	margin-right: 4px
 
 textarea
 	height: 100px
@@ -160,8 +174,8 @@ button, .button
 	max-width: $maxWidth
 	margin: 0 auto
 	.row
-		margin-left: -$rowPad
-		margin-right: -$rowPad
+		//margin-left: -$rowPad
+		//margin-right: -$rowPad
 		width: 100%
 	@extend .clearfix
 	&.collapse
