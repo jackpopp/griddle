@@ -13,8 +13,8 @@
     "gulp-notify": "~1.4.0",
     "gulp-watch": "~0.6.8",
     "event-stream": "~3.1.5",
-    "grunt": "~0.4.5",
     "grunt-browserify": "~2.1.1",
-    "imagemin-pngcrush": "~0.1.0"
+    "imagemin-pngcrush": "~0.1.0",
+    "gulp": "~3.8.10"
   }
 }
