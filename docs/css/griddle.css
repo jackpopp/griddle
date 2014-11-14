@@ -127,8 +127,6 @@ button, .button {
   max-width: 1280px;
   margin: 0 auto; }
   .row .row {
-    margin-left: -12px;
-    margin-right: -12px;
     width: 100%; }
   .row.collapse {
     padding: 0; }
